@@ -1,0 +1,401 @@
+Group,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+
+AddrOut,/PC_OUT_EN,/PC_OUT_EN++,/AR_OUT_EN,/AR_OUT_EN++,/AR_OUT_EN_WR,/AR_OUT_EN_WR++,/SP_OUT_EN,/SP_OUT_EN_WR,,,,,,,,,
+AddrOut,106460,8936,8364,2192,288,0,2472,2360
+
+OutputEn,,none_1,none_2,none_3,none_4,none_5,none_6,none_7,/OE_iDB,/OE_iDB_LD_SP,/OE_A_BCD,/OE_A,/OE_X,/OE_Y,/OE_SP,/OE_SR,/OE_PC_H,/OE_PC_L,/OE_PC_L_BR,/OE_BRKL,/OE_SIX_L,/OE_SIX_H,/CH_SR,/ACK_EXC,/OE_ALU,/OE_ALU_NZ,/OE_ALU_NZC,/OE_ALU_NZCV,/OE_ALU_SH,/OE_ALU_HDCY,/OE_ALU_FDCY,/OE_ALU_NZV
+OutputEn,103570,0,0,0,0,0,0,0,12572,32,110,523,392,224,840,528,832,784,64,2056,1312,32,568,1280,4041,480,184,160,88,64,320,16
+
+LoadSel,,/LD_IR,/LD_A,/LD_X,/LD_Y,/LD_AL,/LD_PC_H,/LD_AR_ZP,/LD_AR_H,/LD_ALU_A,/LD_ALU_B,/LD_ALU_AB,/LD_ALU_AH,/LD_SR,/LD_SP*,/LD_SP
+LoadSel,101304,7344,504,72,64,4688,2144,440,2379,1495,56,920,214,2064,3704,3680
+
+AluCode,A,A + 1,A - 1,A + A,A + A + Cy,A + B,A + B + Cy,A - B,A - B - !Cy,B,A & B,A | B,A ^ B,!A,!B,A  Cy
+AluCode,117170,359,4872,112,112,1169,287,337,285,2568,640,129,2688,0,264,80
+
+FDCY
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=0,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=0,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=0,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=0,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=0,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=0,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=0,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=0,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=0,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=0,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=0,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=0,MC=4
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=0,MC=6
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=0,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=0,MC=4
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=0,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=0,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=0,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=0,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=0,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=0,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=0,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=0,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=0,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=0,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=0,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=0,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=0,MC=4
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=0,MC=6
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=0,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=0,MC=4
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=0,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=1,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=1,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=1,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=1,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=1,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=1,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=1,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=1,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=1,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=1,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=1,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=1,MC=4
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=1,MC=6
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=1,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=1,MC=4
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=1,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=1,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=1,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=1,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=1,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=1,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=1,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=1,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=1,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=1,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=1,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=1,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=1,MC=4
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=1,MC=6
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=1,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=1,MC=4
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=1,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=2,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=2,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=2,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=2,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=2,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=2,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=2,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=2,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=2,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=2,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=2,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=2,MC=4
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=2,MC=6
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=2,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=2,MC=4
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=2,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=2,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=2,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=2,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=2,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=2,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=2,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=2,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=2,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=2,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=2,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=2,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=2,MC=4
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=2,MC=6
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=2,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=2,MC=4
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=2,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=3,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=3,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=3,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=3,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=3,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=3,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=3,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=3,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=3,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=3,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=3,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=3,MC=4
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=3,MC=6
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=3,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=3,MC=4
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=3,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=3,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=3,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=3,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=3,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=3,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=3,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=3,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=3,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=3,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=3,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=3,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=3,MC=4
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=3,MC=6
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=3,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=3,MC=4
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=3,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=4,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=4,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=4,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=4,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=4,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=4,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=4,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=4,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=4,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=4,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=4,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=4,MC=4
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=17
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=12
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=10
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=14
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=6
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=18
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=14
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=4
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=16
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=16
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=4,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=4,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=4,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=4,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=4,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=4,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=4,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=4,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=4,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=4,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=4,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=4,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=4,MC=4
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=18
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=12
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=10
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=14
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=6
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=18
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=13
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=4
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=15
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=15
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=4,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=5,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=5,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=5,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=5,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=5,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=5,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=5,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=5,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=5,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=5,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=5,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=5,MC=4
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=17
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=12
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=10
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=14
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=6
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=18
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=14
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=4
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=16
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=16
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=5,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=5,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=5,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=5,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=5,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=5,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=5,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=5,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=5,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=5,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=5,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=5,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=5,MC=4
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=18
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=12
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=10
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=14
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=6
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=18
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=13
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=4
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=15
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=15
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=5,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=6,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=6,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=6,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=6,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=6,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=6,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=6,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=6,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=6,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=6,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=6,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=6,MC=4
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=18
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=12
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=10
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=14
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=6
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=18
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=14
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=4
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=16
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=16
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=6,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=6,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=6,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=6,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=6,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=6,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=6,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=6,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=6,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=6,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=6,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=6,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=6,MC=4
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=18
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=12
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=10
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=14
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=6
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=18
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=14
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=4
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=16
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=16
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=6,MC=4
+0x11: ORA (ind).Y     OR Memory with Accumulator,Section=0,Flag=7,MC=6
+0x19: ORA abs.Y       OR Memory with Accumulator,Section=0,Flag=7,MC=4
+0x1D: ORA abs.X       OR Memory with Accumulator,Section=0,Flag=7,MC=4
+0x1E: ASL abs.X       Arithmetic Shift Left,Section=0,Flag=7,MC=4
+0x31: AND (ind).Y     AND Memory with Accumulator,Section=0,Flag=7,MC=6
+0x39: AND abs.Y       AND Memory with Accumulator,Section=0,Flag=7,MC=4
+0x3D: AND abs.X       AND Memory with Accumulator,Section=0,Flag=7,MC=4
+0x3E: ROL abs.X       Rotate One Bit Left (Memory or Accumulator),Section=0,Flag=7,MC=4
+0x51: EOR (ind).Y     Exclusive-OR Memory with Accumulator,Section=0,Flag=7,MC=6
+0x59: EOR abs.Y       Exclusive-OR Memory with Accumulator,Section=0,Flag=7,MC=4
+0x5D: EOR abs.X       Exclusive-OR Memory with Accumulator,Section=0,Flag=7,MC=4
+0x5E: LSR abs.X       Shift One Bit Right (Memory or Accumulator),Section=0,Flag=7,MC=4
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=18
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=12
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=10
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=14
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=6
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=18
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=14
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=4
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=16
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=4
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=16
+0x7E: ROR abs.X       Rotate One Bit Right (Memory or Accumulator),Section=0,Flag=7,MC=4
+0x91: STA (ind).Y     Store Accumulator in Memory,Section=0,Flag=7,MC=6
+0x99: STA abs.Y       Store Accumulator in Memory,Section=0,Flag=7,MC=4
+0x9D: STA abs.X       Store Accumulator in Memory,Section=0,Flag=7,MC=4
+0xB1: LDA (ind).Y     Load Accumulator with Memory,Section=0,Flag=7,MC=6
+0xB9: LDA abs.Y       Load Accumulator with Memory,Section=0,Flag=7,MC=4
+0xBC: LDY abs.X       Load Index Y with Memory,Section=0,Flag=7,MC=4
+0xBD: LDA abs.X       Load Accumulator with Memory,Section=0,Flag=7,MC=4
+0xBE: LDX abs.Y       Load Index X with Memory,Section=0,Flag=7,MC=4
+0xD1: CMP (ind).Y     Compare Memory with Accumulator,Section=0,Flag=7,MC=6
+0xD9: CMP abs.Y       Compare Memory with Accumulator,Section=0,Flag=7,MC=4
+0xDD: CMP abs.X       Compare Memory with Accumulator,Section=0,Flag=7,MC=4
+0xDE: DEC abs.X       Decrement Memory by One,Section=0,Flag=7,MC=4
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=18
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=12
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=10
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=14
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=6
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=18
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=14
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=4
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=16
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=4
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=16
+0xFE: INC abs.X       Increment Memory by One,Section=0,Flag=7,MC=4
+
+HDCY
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=14
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=8
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=6
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=10
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=14
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=10
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=12
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=4,MC=12
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=14
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=8
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=6
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=10
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=14
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=10
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=12
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=4,MC=12
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=14
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=8
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=6
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=10
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=14
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=10
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=12
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=5,MC=12
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=14
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=8
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=6
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=10
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=14
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=10
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=12
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=5,MC=12
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=14
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=8
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=6
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=10
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=14
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=10
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=12
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=6,MC=12
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=14
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=8
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=6
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=10
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=14
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=10
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=12
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=6,MC=12
+0x61: ADC (ind.X)     Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=14
+0x65: ADC zpg         Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=8
+0x69: ADC #           Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=6
+0x6D: ADC abs         Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=10
+0x71: ADC (ind).Y     Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=14
+0x75: ADC zpg.X       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=10
+0x79: ADC abs.Y       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=12
+0x7D: ADC abs.X       Add Memory to Accumulator with Carry,Section=0,Flag=7,MC=12
+0xE1: SBC (ind.X)     Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=14
+0xE5: SBC zpg         Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=8
+0xE9: SBC #           Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=6
+0xED: SBC abs         Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=10
+0xF1: SBC (ind).Y     Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=14
+0xF5: SBC zpg.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=10
+0xF9: SBC abs.Y       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=12
+0xFD: SBC abs.X       Subtract Memory from Accumulator with Borrow,Section=0,Flag=7,MC=12

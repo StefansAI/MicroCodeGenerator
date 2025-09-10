@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|c:\\users\\stefa\\source\\repos\\microcodegenerator\\microcodegenerator\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|solutionrelative:microcodegenerator\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\microcodegenerator\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|solutionrelative:microcodegenerator\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\microcodegenerator\\microcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|solutionrelative:microcodegenerator\\microcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\microcodegenerator\\rom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FB2FD53-9659-40C1-AF9D-AAB392C3A621}|MicroCodeGenerator\\MicroCodeGenerator.csproj|solutionrelative:microcodegenerator\\rom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MicroCode.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\MicroCode.cs",
+              "RelativeDocumentMoniker": "MicroCodeGenerator\\MicroCode.cs",
+              "ToolTip": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\MicroCode.cs",
+              "RelativeToolTip": "MicroCodeGenerator\\MicroCode.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:48:37.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ROM.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\ROM.cs",
+              "RelativeDocumentMoniker": "MicroCodeGenerator\\ROM.cs",
+              "ToolTip": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\ROM.cs",
+              "RelativeToolTip": "MicroCodeGenerator\\ROM.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T20:48:35.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\frmMain.cs",
+              "RelativeDocumentMoniker": "MicroCodeGenerator\\frmMain.cs",
+              "ToolTip": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\frmMain.cs",
+              "RelativeToolTip": "MicroCodeGenerator\\frmMain.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAMwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T02:49:14.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\frmMain.cs",
+              "RelativeDocumentMoniker": "MicroCodeGenerator\\frmMain.cs",
+              "ToolTip": "C:\\Users\\stefa\\source\\repos\\MicroCodeGenerator\\MicroCodeGenerator\\frmMain.cs [Design]",
+              "RelativeToolTip": "MicroCodeGenerator\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T01:48:58.786Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+Code	Description	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	T3_0	T3_1	T4_0	T4_1	T5_0	T5_1	T6_0	T6_1	T7_0	T7_1	T8_0	T8_1	T9_0	T9_1	T10_0	T10_1	T11_0	T11_1	T12_0	T12_1	T13_0	T13_1	T14_0	T14_1	T15_0	T15_1	Column1	
+0x0	RESET	Put out PC addr	Fetch Instruction Code	Decode Instruction	Loading 0xFC to AL	Loading 0xFF to AH	Put out addr 0xFFFC	Put out addr 0xFFFC	Read vector low byte	Address 0xFFFD	Read vector high byte	Load 0xFF to AL	Load AL to SP	Load 0x06 to ALU_B	Load 0x06 to SR	Put out PC addr	Fetch Instruction Code																		
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_BRKL				/OE_iDB		/OE_iDB			/OE_SIX_L	/OE_ALU	/ACK_EXC	/OE_iDB																		
+			/LD_IR		/LD_AL		/LD_AR_H		/LD_AL		/LD_PC_H	/LD_SP*	/LD_SP		/LD_SR		/LD_IR																		
+		A	A	A	A ^ B	A ^ B	A	A	A	A	A	A	A	B	B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x1	NMI	Put out PC addr	Fetch Instruction Code	Decode Instruction	InitSP decrement	Load SP-1 to SP*	Write PCH to Stack	Load SP-2  to SP*	Write PCL to Stack	Load SP-3  to SP*	Write SR to Stack	Load 0xFC to AL	Load 0xFFFC to AR	Put out 0xFFFC	Read Low Addr	Put out 0xFFFD	Read High Addr	Put out PC addr	Fetch Instruction Code																
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/CH_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+			/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H	/LD_SR	/LD_AL		/LD_PC_H		/LD_IR																
+		A	A	A	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	A & B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x2	RESET	Put out PC addr	Fetch Instruction Code	Decode Instruction	Loading 0xFC to AL	Loading 0xFF to AH	Put out addr 0xFFFC	Put out addr 0xFFFC	Read vector low byte	Address 0xFFFD	Read vector high byte	Load 0xFF to AL	Load AL to SP	Load 0x06 to ALU_B	Load 0x06 to SR	Put out PC addr	Fetch Instruction Code																		
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_BRKL				/OE_iDB		/OE_iDB			/OE_SIX_L	/OE_ALU	/ACK_EXC	/OE_iDB																		
+			/LD_IR		/LD_AL		/LD_AR_H		/LD_AL		/LD_PC_H	/LD_SP*	/LD_SP		/LD_SR		/LD_IR																		
+		A	A	A	A ^ B	A ^ B	A	A	A	A	A	A	A	B	B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x3	INT	Put out PC addr	Fetch Instruction Code	Decode Instruction	InitSP decrement	Load SP-1 to SP*	Write PCH to Stack	Load SP-2  to SP*	Write PCL to Stack	Load SP-3  to SP*	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Put out 0xFFFF	Read High Addr	Put out PC addr	Fetch Instruction Code																
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+			/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H	/LD_SR	/LD_AL		/LD_PC_H		/LD_IR																
+		A	A	A	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x4	RESET	Put out PC addr	Fetch Instruction Code	Decode Instruction	Loading 0xFC to AL	Loading 0xFF to AH	Put out addr 0xFFFC	Put out addr 0xFFFC	Read vector low byte	Address 0xFFFD	Read vector high byte	Load 0xFF to AL	Load AL to SP	Load 0x06 to ALU_B	Load 0x06 to SR	Put out PC addr	Fetch Instruction Code																		
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_BRKL				/OE_iDB		/OE_iDB			/OE_SIX_L	/OE_ALU	/ACK_EXC	/OE_iDB																		
+			/LD_IR		/LD_AL		/LD_AR_H		/LD_AL		/LD_PC_H	/LD_SP*	/LD_SP		/LD_SR		/LD_IR																		
+		A	A	A	A ^ B	A ^ B	A	A	A	A	A	A	A	B	B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x5	NMI	Put out PC addr	Fetch Instruction Code	Decode Instruction	InitSP decrement	Load SP-1 to SP*	Write PCH to Stack	Load SP-2  to SP*	Write PCL to Stack	Load SP-3  to SP*	Write SR to Stack	Load 0xFC to AL	Load 0xFFFC to AR	Put out 0xFFFC	Read Low Addr	Put out 0xFFFD	Read High Addr	Put out PC addr	Fetch Instruction Code																
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/CH_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+			/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H	/LD_SR	/LD_AL		/LD_PC_H		/LD_IR																
+		A	A	A	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	A & B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x6	RESET	Put out PC addr	Fetch Instruction Code	Decode Instruction	Loading 0xFC to AL	Loading 0xFF to AH	Put out addr 0xFFFC	Put out addr 0xFFFC	Read vector low byte	Address 0xFFFD	Read vector high byte	Load 0xFF to AL	Load AL to SP	Load 0x06 to ALU_B	Load 0x06 to SR	Put out PC addr	Fetch Instruction Code																		
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_BRKL				/OE_iDB		/OE_iDB			/OE_SIX_L	/OE_ALU	/ACK_EXC	/OE_iDB																		
+			/LD_IR		/LD_AL		/LD_AR_H		/LD_AL		/LD_PC_H	/LD_SP*	/LD_SP		/LD_SR		/LD_IR																		
+		A	A	A	A ^ B	A ^ B	A	A	A	A	A	A	A	B	B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x7	RESET	Put out PC addr	Fetch Instruction Code	Decode Instruction	InitSP decrement	Loading 0xFF to AH	Put out addr 0xFFFC	Put out addr 0xFFFC	Read vector low byte	Address 0xFFFD	Read vector high byte	Load 0xFF to AL	Load AL to SP	Load 0x06 to ALU_B	Load 0x06 to SR	Put out PC addr	Fetch Instruction Code																		
+		/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+			/OE_iDB		/OE_BRKL				/OE_iDB		/OE_SR			/OE_SIX_L	/OE_ALU	/ACK_EXC	/OE_iDB																		
+			/LD_IR		/LD_AL		/LD_AR_H		/LD_AL		/LD_PC_H	/LD_SP*	/LD_SP		/LD_SR		/LD_IR																		
+		A	A	A	A ^ B	A ^ B	A	A	A	A	A	A	A	B	B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			

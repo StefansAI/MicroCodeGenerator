@@ -1,0 +1,49 @@
+Code	Description	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	T3_0	T3_1	T4_0	T4_1	T5_0	T5_1	T6_0	T6_1	T7_0	T7_1	T8_0	T8_1	T9_0	T9_1	T10_0	T10_1	T11_0	T11_1	T12_0	T12_1	T13_0	T13_1	T14_0	T14_1	T15_0	T15_1	Column1	
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:0	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:0	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:1	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:0	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:0	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:0	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:1	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:0	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:0	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:1	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:1	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:1	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:0	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:1	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0x00	BRK	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP decrement	Load SP-1 to AL	Write PCH to Stack	Load SP-2 to SP*	Write PCL to Stack	Load SP-3 to Stack	Write SR to Stack	Load 0xFE to AL	Load 0xFFFE to AR	Put out 0xFFFE	Read Low Addr	Incremented to 0xFFFF	Read High Addr to PC	Put out PC addr	Fetch Instruction Code																
+FC:1	Force Break	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/SP_OUT_EN	/SP_OUT_EN_WR	/PC_OUT_EN	/PC_OUT_EN	/AR_OUT_EN	/AR_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: implied		/OE_iDB		/OE_SP	/OE_ALU	/OE_PC_H	/OE_ALU	/OE_PC_L	/OE_ALU	/OE_SR	/OE_BRKL			/OE_iDB		/OE_iDB		/OE_iDB																
+SC:1	Bytes: 1  Cycles: 7  Operand: 		/LD_IR		/LD_ALU_A	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_SP*	/LD_SP	/LD_AL	/LD_AR_H		/LD_AL		/LD_PC_H		/LD_IR																
+	NZCIDV: ---1--	A	A	A + 1	A - 1	A - 1	A - 1	A - 1	A - 1	A - 1	A	!B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			

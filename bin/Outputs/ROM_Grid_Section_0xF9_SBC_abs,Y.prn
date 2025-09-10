@@ -1,0 +1,49 @@
+Code	Description	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	T3_0	T3_1	T4_0	T4_1	T5_0	T5_1	T6_0	T6_1	T7_0	T7_1	T8_0	T8_1	T9_0	T9_1	T10_0	T10_1	T11_0	T11_1	T12_0	T12_1	T13_0	T13_1	T14_0	T14_1	T15_0	T15_1	Column1	
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																								
+FC:0	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB	/OE_A_BCD	/OE_A_BCD	/OE_ALU_NZCV	/OE_iDB																								
+SC:0	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH		/LD_ALU_AB	/LD_A	/LD_IR																								
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
+FC:1	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB		/OE_ALU		/OE_A_BCD	/OE_ALU_NZCV	/OE_iDB																						
+SC:0	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH		/LD_AR_H		/LD_ALU_AB	/LD_A	/LD_IR																						
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A + 1	A + 1	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
+FC:0	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB		/OE_ALU		/OE_A	/OE_ALU_NZCV	/OE_iDB																						
+SC:0	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH		/LD_AR_H		/LD_ALU_AB	/LD_A	/LD_IR																						
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A + 1	A + 1	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
+FC:1	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB		/OE_ALU		/OE_A	/OE_ALU_NZCV	/OE_iDB																						
+SC:0	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH		/LD_AR_H		/LD_ALU_AB	/LD_A	/LD_IR																						
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A + 1	A + 1	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code																
+FC:0	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB				/OE_A	/OE_ALU_NZCV		/OE_ALU_HDCY		/OE_ALU_FDCY			/OE_iDB																
+SC:1	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH				/LD_ALU_AB	/LD_A							/LD_IR																
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A	A	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
+FC:1	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:0	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB				/OE_A	/OE_ALU_NZCV		/OE_ALU_HDCY		/OE_ALU_FDCY			/OE_SIX_H	/OE_ALU_NZCV	/OE_iDB														
+SC:1	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH				/LD_ALU_AB	/LD_A								/LD_A	/LD_IR														
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A	A	A	A - B - !Cy	A - B - !Cy	A	A	A	A	A	A	A - B	A - B	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code														
+FC:0	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB				/OE_A	/OE_ALU_NZCV		/OE_ALU_HDCY		/OE_SIX_L	/OE_ALU_FDCY				/OE_iDB														
+SC:1	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH				/LD_ALU_AB	/LD_A					/LD_A				/LD_IR														
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A	A	A	A - B - !Cy	A - B - !Cy	A	A	A	A - B	A - B	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
+0xF9	SBC abs,Y	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	ALU_B = 0x06	Add 0x06 correction	Put out PC Addr	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
+FC:1	Subtract Memory from Accumulator with Borrow	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN++	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/AR_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN++	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN	/PC_OUT_EN		
+HC:1	Addr-Mode: absolute,Y		/OE_iDB		/OE_Y	/OE_ALU_FDCY	/OE_iDB				/OE_A	/OE_ALU_NZCV		/OE_ALU_HDCY		/OE_SIX_L	/OE_ALU_FDCY		/OE_SIX_H	/OE_ALU_NZCV	/OE_iDB														
+SC:1	Bytes: 3  Cycles: 4*  Operand: word		/LD_IR		/LD_ALU_AB	/LD_AL	/LD_ALU_AH				/LD_ALU_AB	/LD_A					/LD_A			/LD_A	/LD_IR														
+	NZCIDV: +++--+	A	A	A	A + B	A + B	A	A	A	A	A - B - !Cy	A - B - !Cy	A	A	A	A - B	A - B	A	A - B	A - B	A	A	A	A	A	A	A	A	A	A	A	A	A		
+																																			
