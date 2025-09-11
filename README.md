@@ -11,33 +11,33 @@ First, we have to look at the schematic of the micro code sequencer of the TTL 6
   <img src="docs/assets/images/schematic.png" />
 </div>
 <br>
-There are 2 ROMs in parallel to produce 16 bit wide micro codes. An instruction register provides 8 bit of the address. But the micro steps are created by a 4-bit counter and a clock phase. This together allow for 5-bit for the micro steps, giving 16 clocks or 32 phases for each instruction. The 6502 would normally only use up to 7 clocks per instruction. But I decided to implement BCD calculations with more microsteps instead of more hardware, I gave one more bit to the microsteps.
+There are 2 ROMs in parallel to produce 16 bit wide micro codes. An instruction register provides 8 bit of the address. But the micro steps are created by a 4-bit counter and a clock phase. This together allow for 5-bit for the micro steps, giving 16 clocks or 32 phases for each instruction. The 6502 would normally only use up to 7 clocks per instruction. But since I decided to implement BCD calculations with more microsteps instead of more hardware, I gave one more bit to the microsteps.
 <br><br>
 <div style="text-align: center;">
   <img src="docs/assets/images/ROM_signals.png" />
 </div>
 <br>
-If you look closer, the instruction and the microsteps generate 13 bits of the address bus. That leaves 4 bits for additional conditions. The highest bit is reserved for exceptions, like interrupts and reset, because they will get the highest priority. Then there are 3 bits split into any special condition and then full carry and half carry which also can have double meaning. Those bits are generated for address calculations or branch conditions.
+If you look closer, the instruction and the microsteps generate 13 bits of the address bus. That leaves 4 bits for additional conditions. The highest bit is reserved for exceptions, like interrupts and reset, because they will get the highest priority. Then there are 3 bits split into any special condition, then full carry and half carry which also can have double meaning. Those bits are generated for address calculations, branch conditions or BCD handling.
 <br><br>
 <div style="text-align: center;">
   <img src="docs/assets/images/jmp_example.png" />
 </div>
 <br>
 The GUI shows an Excel-like grid with a description of the instruction on the left and cells for the micro code phases to the right. <br>
-Each instruction starts with T0 for fetching the instruction code and ends with fecthing the next instruction code at the last clock phase. The microstep counter is loaded to T1 with /LD_IR, continuing at T2 of the next instruction cycle.<br>
-Each instruction uses 5 rows for contents plus one row for spacing. The top row is a text field for a comment. The next 4 rows represent the codes for the 4 signal groups:<br>
+Each instruction starts with T0 for fetching the instruction code and ends with fecthing the next instruction code in the last clock phase. The microstep counter is loaded to T1 with /LD_IR, continuing at T2 of the next instruction cycle.<br>
+Each instruction uses 5 rows for contents plus one row for spacing. The top row is a text field for a short comment. The next 4 rows represent the codes for the 4 signal groups:<br>
 - Address output<br>
 - Internal databus enable<br>
 - Load internal register<br>
 - ALU-code<br>
-The JMP instruction shown here is very simple. 3 bytes have to be read: the instrcution code, the low part of the address and the higher 8-bit of the address. Each memory read takes one clock for the 6502. The first phase has to send out the address and the second phase of the clock phase is used to read from memory. To open the databus driver from external memory to internal databus, /OE_iDB ha to be activated. The load signals /LD_IR, /LD_AL and /LD_PC_H take care of capturing the internal databus contents at the rising edge at the end of the phase into the correct register.
+The JMP instruction shown here is very simple. 3 bytes have to be read: the instrcution code, the low part of the address and the higher 8-bit of the address. Each memory read cycle takes one clock for the 6502. At the beginning of the first phase the address has to be send out and the second phase of the clock phase is used to read from memory (or to write in other cases). To open the databus driver from external memory to internal databus, /OE_iDB has to be activated. The load signals /LD_IR, /LD_AL and /LD_PC_H take care of capturing the internal databus contents into the correct register at the rising edge at the end of the phase.
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/combobox.png" />
 </div>
 <br>
-When clicking on one of the selection cells, a combobox is opened to chose from the possible codes. This helps chosing only correct codes.
+When clicking on one of the selection cells, a combobox opens to chose from the possible codes. This helps selecting only correct codes.
 <br>
 <br>
 <div style="text-align: center;">
