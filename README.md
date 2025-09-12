@@ -5,7 +5,7 @@
   <img src="docs/assets/images/main_screen.png" />
 </div>
 <br>
-First, we have to look at the schematic of the micro code sequencer of the TTL 6510 computer.
+First, we have to look at the schematic of the micro code sequencer of the <a href="https://github.com/StefansAI/TTL-6510-Computer">TTL 6510 computer.</a>
 <br><br>
 <div style="text-align: center;">
   <img src="docs/assets/images/schematic.png" />
@@ -20,11 +20,11 @@ There are 2 ROMs in parallel to produce 16 bit wide micro codes. An instruction 
 If you look closer, the instruction and the microsteps generate 13 bits of the address bus. That leaves 4 bits for additional conditions. The highest bit is reserved for exceptions, like interrupts and reset, because they will get the highest priority. Then there are 3 bits split into any special condition, then full carry and half carry which also can have double meaning. Those bits are generated for address calculations, branch conditions or BCD handling.
 <br><br>
 <div style="text-align: center;">
-  <img src="docs/assets/images/jmp_example.png" />
+  <img src="docs/assets/images/jmp_example.png"/>
 </div>
 <br>
 The GUI shows an Excel-like grid with a description of the instruction on the left and cells for the micro code phases to the right. <br>
-Each instruction starts with T0 for fetching the instruction code and ends with fecthing the next instruction code in the last clock phase. The microstep counter is loaded to T1 with /LD_IR, continuing at T2 of the next instruction cycle.<br>
+Each instruction starts with T0 for fetching the instruction code and ends with fecthing the next instruction code in the last clock phase. The microstep counter is loaded to T1 with /LD_IR, switching to T1 and continuing at T2 of the next instruction cycle.<br>
 Each instruction uses 5 rows for contents plus one row for spacing. The top row is a text field for a short comment. The next 4 rows represent the codes for the 4 signal groups:<br>
 - Address output<br>
 - Internal databus enable<br>
@@ -34,7 +34,15 @@ The JMP instruction shown here is very simple. 3 bytes have to be read: the inst
 <br>
 <br>
 <div style="text-align: center;">
-  <img src="docs/assets/images/combobox.png" />
+  <img src="docs/assets/images/jump_ds.png"/>
+</div>
+<br>
+In <a href="https://github.com/StefansAI/DigiSim">DigiSim</a> the execution of the JMP instruction looks like this. The MicroCode counter (MC) is the input into the ROMs. But there is a latency of one phase, I added "REG_MC" to sample MC with the same latency. "REG_MC" directly corresponds now to T1,T2,T3 etc. There is a low pulse of /LD_IR at the end of the "LSR A" loading the instruction register (IR) with "0x4C" and incrementing PC, thus starting the execution of the "JMP abs" instruction. <br> 
+At the end of T1 "/LD_AL" loads 0x7C from the internal databus (iDB) into the AL register. AL is a transparent D-Latch and that's why the output changes shortly after activating the load signal. At T2_1, the signal "/LD_PC_H" is activated and 0xFE is loaded from iDB into PC_H with the rising edge. At the same edge PC_L is loaded from AL, so PC is now 0xFE7C. T3_1 now loads the next instrcution (EOR abs).
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="docs/assets/images/combobox.png"/>
 </div>
 <br>
 When clicking on one of the selection cells, a combobox opens to chose from the possible codes. This helps selecting only correct codes.
