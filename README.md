@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">MicroCodeGenerator</h1>
-<h2 style="text-align: center;">Tool to edit the MicroCodes for the TTL 6510 Computer</h2>
+<h2 style="text-align: center;">Tool to edit the Micro Codes for the TTL 6510 Computer</h2>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/main_screen.png" />
@@ -38,21 +38,21 @@ The JMP instruction shown here is very simple. 3 bytes have to be read: the inst
 </div>
 <br>
 In <a href="https://github.com/StefansAI/SimTTL">SimTTL</a> the execution of the JMP instruction looks like this. The Micro Code counter (MC) is the input into the ROMs. But there is a latency of one phase, I added "REG_MC" to sample MC with the same latency. "REG_MC" directly corresponds now to T1,T2,T3 etc. There is a low pulse of /LD_IR at the end of the "LSR A" loading the instruction register (IR) with "0x4C" and incrementing PC, thus starting the execution of the "JMP abs" instruction. <br> 
-At the end of T1 "/LD_AL" loads 0x7C from the internal databus (iDB) into the AL register. AL is a transparent D-Latch and that's why the output changes shortly after activating the load signal. At T2_1, the signal "/LD_PC_H" is activated and 0xFE is loaded from iDB into PC_H with the rising edge. At the same edge PC_L is loaded from AL, so PC is now 0xFE7C. T3_1 now loads the next instrcution (EOR abs).
+At the end of T1 "/LD_AL" loads 0x7C from the internal databus (iDB) into the AL register. AL is a transparent D-Latch and that's why the output changes shortly after activating the load signal. At T2_1, the signal "/LD_PC_H" is activated and 0xFE is loaded from iDB into PC_H with the rising edge. At the same edge PC_L is loaded from AL, so PC is now 0xFE7C. T3_1 now loads the next instruction (EOR abs).
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/combobox.png"/>
 </div>
 <br>
-When clicking on one of the selection cells, a combobox opens to chose from the possible codes. This helps selecting only correct codes.
+When clicking on one of the selection cells, a combobox opens to choose from the possible codes. This helps selecting only correct codes.
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/area_selection.png" />
 </div>
 <br>
-To select individual areas for the higher bits, there is a combobox at the bottom. You can check the microcodes for the different bit combinations.
+To select individual areas for the higher bits, there is a combobox at the bottom. You can check the micro codes for the different bit combinations.
 <br>
 <br>
 <div style="text-align: center;">
@@ -66,12 +66,12 @@ This area shows the exception area for the bit combinations where the 3 low acti
   <img src="docs/assets/images/one_instruction.png" />
 </div>
 <br>
-The last area shows one instruction for all 3 higher bits (8 special conditions). This example shows the BVC instruction. The top rows here show the microcodes, when the branch condition is not met and the execution will continue just after the branch. The hardware sets the "SPEC_COND" bit when the overflow flag is cleared with the /OE_PC_L_BR signal in phase T1_1 and the lower rows will be executed with 1 phase latency to execute the branch from T2_1 on.
+The last area shows one instruction for all 3 higher bits (8 special conditions). This example shows the BVC instruction. The top rows here show the micro codes, when the branch condition is not met and the execution will continue just after the branch. The hardware sets the "SPEC_COND" bit when the overflow flag is cleared with the /OE_PC_L_BR signal in phase T1_1 and the lower rows will be executed with 1 phase latency to execute the branch from T2_1 on.
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/ADC_BCD.png" />
 </div>
 <br>
-This last example shows all lower rows the ADC # instruction to be executed when the BCD flag is set resulting in setting "SPEC_COND". In this case additional microcodes will have to be executed to check and perform half and full byte correction by adding 0x06 and/or 0x60 to keep the result in the BCD range.<br>
-ADC and SBC in BCD mode are the only instructions to not meet the original 6502 cycles to save some chips in hardware. But as far as I could find, these conditions are seldomly used.
+This last example shows all lower rows the ADC # instruction to be executed when the BCD flag is set resulting in setting "SPEC_COND". In this case additional micro codes will have to be executed to check and perform half and full byte correction by adding 0x06 and/or 0x60 to keep the result in the BCD range.<br>
+ADC and SBC in BCD mode are the only instructions to not meet the original 6502 cycles to save some chips in hardware. But as far as I could find, these conditions are seldomly used.<br>
