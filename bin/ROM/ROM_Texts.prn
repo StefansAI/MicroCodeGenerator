@@ -271,7 +271,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Store Inc PCH	Store result, PC out	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -303,7 +303,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Store Inc PCH	Store result, PC out	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -311,7 +311,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -335,7 +335,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Store Inc PCH	Store result, PC out	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -352,35 +352,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -399,8 +399,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare increment	Increment PCH	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare increment	Increment PCH	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -431,7 +431,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Store Inc PCH	Store result, PC out	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -463,7 +463,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Store Inc PCH	Store result, PC out	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -495,7 +495,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Prepare PCH increment	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -527,7 +527,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -559,7 +559,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -567,7 +567,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -591,7 +591,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -608,35 +608,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -655,8 +655,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -687,7 +687,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -719,7 +719,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -751,7 +751,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -783,7 +783,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -815,7 +815,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -823,7 +823,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -847,7 +847,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -864,35 +864,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Prep ARH Increment	Update ARH	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -911,8 +911,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -943,7 +943,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -975,7 +975,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1007,7 +1007,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1039,7 +1039,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1071,7 +1071,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1079,7 +1079,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1103,7 +1103,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1120,35 +1120,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Put out PC Addr	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Put out PC Addr	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code																
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code																		
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code														
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code										
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code														
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1167,8 +1167,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -1199,7 +1199,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1231,7 +1231,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1263,7 +1263,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Put out PC Addr	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1295,7 +1295,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1327,7 +1327,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Dummy phase	Update AH	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1335,7 +1335,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1359,7 +1359,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1376,35 +1376,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code																
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1423,8 +1423,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -1455,7 +1455,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1487,7 +1487,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1519,7 +1519,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Wait one phase	Wait one phase	Check decimal Full CY	Wait one phase	Load ALU_A	ALU_B = 0x60	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1551,7 +1551,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1583,7 +1583,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1591,7 +1591,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1615,7 +1615,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1632,35 +1632,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code														
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code																
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1679,8 +1679,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -1711,7 +1711,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1743,7 +1743,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1775,7 +1775,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Update PCH	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Wait one phase	Finish cycle	Put out PC Addr	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1807,7 +1807,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1839,7 +1839,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1847,7 +1847,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
+0x38	SEC	implied	Set Carry Flag	1	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set CY 	Put out PC Addr	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1871,7 +1871,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1888,35 +1888,35 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Init SP increment	Pre-load incr SP	Load SP* to SP	Put out SP addr	Read PCL	Load next SP	Read PCH	Put out PC addr	Increment PC	Put out PC Addr	Fetch Instruction Code																		
-0x61	ADC (ind,X)	(indirect,X)	Add Memory to Accumulator with Carry	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d and X	Load d+X to AL	Finish Cycle	Put out AR 	Read Low Addr	Next AR	Read High Addr	Put out Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x65	ADC zpg	zeropage	Add Memory to Accumulator with Carry	2	3	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code														
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read d	Put out AR addr	Read ZP location	Put out AR addr	Write ZP location	Set NZ flags	dummy	Put out PC Addr	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Prepare SP decrement	Load decremented SP	Update SP	Put out SP Addr	Read SP Location	Put out PC Addr	Fetch Instruction Code																						
-0x69	ADC #	immediate	Add Memory to Accumulator with Carry	2	2	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code																
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read #	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Load A to ALU	Store result, PC out	Fetch Instruction Code																										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low addr	Put out next addr	Read High addr	Put out Mem Addr	Read Low Addr	Putout Next AR	Read High Addr	Put out PC Addr	Fetch Instruction Code																				
-0x6D	ADC abs	absolute	Add Memory to Accumulator with Carry	3	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
-0x71	ADC (ind),Y	(indirect),Y	Add Memory to Accumulator with Carry	2	5*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x75	ADC zpg,X	zeropage,X	Add Memory to Accumulator with Carry	2	4	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code												
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Read Data	Data Addr Out	Write Data	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Set Interrupt disable	Put out PC Addr	Fetch Instruction Code																										
-0x79	ADC abs,Y	absolute,Y	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Put out PC Addr	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Put out PC Addr	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-0x7D	ADC abs,X	absolute,X	Add Memory to Accumulator with Carry	3	4*	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Put out PC Addr	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	Put Data Addr	Put Data Addr	Put Data Addr	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Put out PC Addr	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code										
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Low Addr	Store Low Result	Read High Addr	dummy	dummy	AR out	Read Data	AR out	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1935,8 +1935,8 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Write data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
-0x91	STA (ind),Y	(indirect),Y	Store Accumulator in Memory	2	6	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Write Data	Store result, PC out	Fetch Instruction Code	Store result, PC out	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read Operand	Get ZP Addr	Finish Cycle	Data Addr Out	Write Data	Put out PC Addr	Fetch Instruction Code																						
@@ -1967,7 +1967,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out PC Addr	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -1999,7 +1999,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Fetch Instruction Code																						
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Read Data	Store result, PC out	Fetch Instruction Code																				
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
@@ -2031,7 +2031,7 @@ OpCode	Mnemonic	AddrMode	Description	Bytes	Cycles	T0_0	T0_1	T1_0	T1_1	T2_0	T2_1	
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code												
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read low addr	Next addr	Read high addr	Put out absolute addr	Read data	Put out absolute addr	Write Result	dummy	dummy	Put out PC Addr	Fetch Instruction Code																		
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
-						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
+0xB0	BCS rel	relative	Branch on Carry Set(branch on C = 1)	2	2**	Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read r, Set Cond	Put out PC Addr	Load PC	Put out PC Addr	Fetch Instruction Code																								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction	Read operand	Put out ZP addr	Read Low Addr	Next ZP addr	Read High Addr	Data Addr	Wasted phase for alignm.	Wasted phase for alignm.	Read Data	Store result, PC out	Wait one phase	Check decimal Half CY	Wait one phase	Load ALU_A	ALU_B = 0x06	Add 0x06 correction	Wait one phase	Load ALU_A	ALU_B = 0x60	Store result, PC out	Fetch Instruction Code								
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													
 						Put out PC Addr	Fetch Instruction Code	Decode Instruction																													

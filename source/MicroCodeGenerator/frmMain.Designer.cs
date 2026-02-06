@@ -932,7 +932,7 @@
             "A & B",
             "A | B",
             "A ^ B",
-            "!A",
+            "A+B+1",
             "!B",
             "A  Cy"});
             this.cbAluCode.Location = new System.Drawing.Point(294, 126);
